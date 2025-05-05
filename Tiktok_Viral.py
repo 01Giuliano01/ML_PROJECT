@@ -177,7 +177,7 @@ coef_l1 = pd.Series(clf_l1.coef_[0], index=X.columns).abs().sort_values(ascendin
 
 print(f"\n=== Performance (ROC AUC) ===\nL2 : {auc_l2:.3f}\nL1 : {auc_l1:.3f}")
 
-print("\n=== Top 10 coefficients L2 (abs) ===")
+print("\n=== Top 10 coefficients L2 (abs) ===")eqgfqsdvqsd
 print(coef_l2.head(10))
 
 print("\n=== Top 10 coefficients L1 (abs) ===")
