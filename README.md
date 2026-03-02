@@ -1,11 +1,11 @@
-# TikTok Virality Prediction — End-to-End ML Pipeline
+# TikTok Virality Prediction â End-to-End ML Pipeline
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.x-F7931E?logo=scikitlearn&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-2.x-150458?logo=pandas&logoColor=white)
 ![Status](https://img.shields.io/badge/status-completed-brightgreen)
 
-> End-to-end machine learning project to **predict whether a TikTok video will go viral** (>100,000 views) using only **pre-publication features** — metadata available before posting, with no engagement data.
+> End-to-end machine learning project to **predict whether a TikTok video will go viral** (>100,000 views) using only **pre-publication features** â metadata available before posting, with no engagement data.
 
 ---
 
@@ -14,7 +14,7 @@
 Can we predict TikTok virality **before** a video is published? This project frames the question as a binary classification task:
 
 - **Target**: viral = 1 if playCount > 100,000, else 0
-- **Key constraint**: only features known at publication time are used — no likes, shares, or comments
+- **Key constraint**: only features known at publication time are used â no likes, shares, or comments
 
 ---
 
@@ -22,8 +22,8 @@ Can we predict TikTok virality **before** a video is published? This project fra
 
 Two TikTok datasets merged vertically:
 
-- tiktok_dataset.csv — main trending video dataset
-- meta_data.csv — supplementary metadata
+- tiktok_dataset.csv â main trending video dataset
+- meta_data.csv â supplementary metadata
 
 **Pre-publication features retained:**
 
@@ -88,9 +88,9 @@ Raw Data (tiktok_dataset.csv + meta_data.csv)
 
 Before modeling, rigorous multicollinearity and feature structure analysis is performed:
 
-- **Correlation matrix** — identifies redundant feature pairs (threshold: |rho| > 0.7)
-- **VIF (Variance Inflation Factor)** — detects and flags multicollinearity
-- **PCA** — analyzes explained variance to understand dimensionality of feature space
+- **Correlation matrix** â identifies redundant feature pairs (threshold: |rho| > 0.7)
+- **VIF (Variance Inflation Factor)** â detects and flags multicollinearity
+- **PCA** â analyzes explained variance to understand dimensionality of feature space
 
 ---
 
@@ -111,13 +111,13 @@ Feature importance is assessed by ranking the top-10 absolute coefficients for e
 
 ```
 ML_PROJECT/
-├── Tiktok_Viral.py                          # Full pipeline: cleaning -> features -> models
-├── test.py                                  # Experimental tests and sanity checks
-├── tiktok_dataset.csv                       # Raw TikTok dataset
-├── meta_data.csv                            # Supplementary metadata
-├── trending_converted.csv                   # Preprocessed trending data
-├── Trending_pre_publication_with_target.csv # Filtered dataset with viral target
-└── Trending_model_ready.csv                 # Final feature-engineered dataset
+âââ Tiktok_Viral.py                          # Full pipeline: cleaning -> features -> models
+âââ test.py                                  # Experimental tests and sanity checks
+âââ tiktok_dataset.csv                       # Raw TikTok dataset
+âââ meta_data.csv                            # Supplementary metadata
+âââ trending_converted.csv                   # Preprocessed trending data
+âââ Trending_pre_publication_with_target.csv # Filtered dataset with viral target
+âââ Trending_model_ready.csv                 # Final feature-engineered dataset
 ```
 
 ---
@@ -143,3 +143,14 @@ python Tiktok_Viral.py
 | numpy | Numerical operations |
 | scikit-learn | Preprocessing, PCA, Logistic Regression, cross-validation |
 | statsmodels | Variance Inflation Factor (VIF) computation |
+
+
+---
+
+## Academic Report
+
+> 📚 **Dauphine | PSL — Master I2D** (May 2025)
+
+The full written report for this project (29 pages) covers the complete methodology: data exploration, feature engineering, model selection, hyperparameter tuning, and business interpretation of results.
+
+[📄 View Full Report (PDF)](report/MLProject_Report.pdf)
